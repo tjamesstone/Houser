@@ -14,4 +14,4 @@ VALUES ('Stone residence', '100 Lane St', 'Provo', 'Utah', 84064),
 ('Barratt Home', '583 E', 'Provo', 'Utah', 84604),
 ('Stone Sr. Residence', '648 S 250 W', 'Midway', 'Utah', 84049);
 
-SELECT * FROM houses
+SELECT * FROM houses;
