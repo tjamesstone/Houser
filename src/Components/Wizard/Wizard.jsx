@@ -1,3 +1,5 @@
+import React, {Component} from 'react'
+
 
 export default class Wizard extends Component{
     constructor(){
@@ -10,7 +12,7 @@ export default class Wizard extends Component{
     render(){
         return(
             <div className="Wizard">
-                
+                Wizard
             </div>
         )
     }

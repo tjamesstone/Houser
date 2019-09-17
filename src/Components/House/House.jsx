@@ -1,3 +1,4 @@
+import React, {Component} from 'react'
 
 export default class House extends Component{
     constructor(){
@@ -10,7 +11,7 @@ export default class House extends Component{
     render(){
         return(
             <div className="House">
-                
+                House
             </div>
         )
     }
