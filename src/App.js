@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Header from './Components/Header/Header'
 import Wizard from './Components/Wizard/Wizard'
-import House from './Components/House/House'
 import './App.css';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
     <div className="App">
       <Header />
       <Wizard />
-      <House />
+      <Dashboard />
     </div>
   );
 }
