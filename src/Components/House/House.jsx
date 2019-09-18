@@ -11,7 +11,25 @@ export default class House extends Component{
     render(){
         return(
             <div className="House">
-                House
+                <div className="houseimage">
+                    <img src="" alt="house"/>
+                </div>
+                <div className="firstinfo">
+                    Property Name:
+                    <br/>
+                    Address:
+                    <br/>
+                    City:
+                    <br/>
+                    State:
+                    <br/>
+                    Zip:
+                </div>
+                <div className="secondinfo">
+                    Monthly Mortgage:
+                    <br/>
+                    Desired Rent:
+                </div>
             </div>
         )
     }
