@@ -6,4 +6,22 @@
   background: #529872;
   color: white;
   display: flex;
+  height: 75px;
+  width: 100%;
+}
+
+
+.houseicon{
+  height: 34;
+  width: 28;
+  position: absolute;
+  top: 23px;
+  left: 28%;
+}
+
+.housertitle{
+  position: absolute;
+  left:31%;
+  
+  top: 0rem;
 }
