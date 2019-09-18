@@ -6,7 +6,11 @@ export default class Wizard extends Component{
     constructor(){
         super()
         this.state={
-
+            name: '',
+            address: '',
+            city: '',
+            state: '',
+            zipcode: 0
         }
     }
 
@@ -21,6 +25,11 @@ export default class Wizard extends Component{
                             Cancel
                         </button>
                     </Link>
+                <input type="text" className="name"/>
+                <input type="text" className="address"/>
+                <input type="text" className="city"/>
+                <input type="text" className="state"/>
+                <input type="text" className="zipcode"/>
             </div>
         )
     }
