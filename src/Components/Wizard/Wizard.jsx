@@ -28,11 +28,35 @@ export default class Wizard extends Component{
                                 </button>
                             </Link>
                         </div>
-                        <input type="text" className="name"/>
-                        <input type="text" className="address"/>
-                        <input type="text" className="city"/>
-                        <input type="text" className="state"/>
-                        <input type="text" className="zipcode"/>
+                        <div className="inputs">
+                            <div className="name">
+                                <h5>Property Name</h5>
+                                <input type="text" className="nameinput"/>
+                            </div>
+                            <div className="address">
+                                <h5>Address</h5>
+                                <input type="text" className="addressinput"/>
+                            </div>
+                            <div className="citystatezip">
+                                <div className="city">
+                                    <h5>City</h5>
+                                    <input type="text" className="cityinput"/>
+                                </div>
+                                <div className="state">
+                                    <h5>State</h5>
+                                    <input type="text" className="stateinput"/>
+                                </div>
+                                <div className="zipcode">
+                                    <h5>Zipcode</h5>
+                                    <input type="number" className="zipcodeinput"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="wiz_complete_button">
+                            <button
+                            className="wiz_button"
+                            >Complete</button>
+                        </div>
                 </div>
             </div>
         )
