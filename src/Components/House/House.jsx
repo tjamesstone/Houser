@@ -17,21 +17,19 @@ export default class House extends Component{
                     alt="house"/>
                 </div>
                 <div className="firstinfo">
-                    Property Name:
-                    <br/>
-                    Address:
-                    <br/>
-                    City:
-                    <br/>
-                    State:
-                    <br/>
-                    Zip:
+                    <p>Property Name: </p>
+                    <p>City: </p>
+                    <p>State: </p>
+                    <p>Zip: </p>
                 </div>
                 <div className="secondinfo">
-                    Monthly Mortgage:
-                    <br/>
-                    Desired Rent:
+                    <p>Monthly Mortgage: </p>
+                    <p>Desired Rent</p>
+                    <div className="x">
+                        X
                 </div>
+                </div>
+                
             </div>
         )
     }
