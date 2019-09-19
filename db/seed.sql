@@ -10,8 +10,8 @@ create table houses (
 );
 
 INSERT INTO houses (name, address, city, state, zipcode)
-VALUES ('Stone residence', '100 Lane St', 'Provo', 'Utah', 84064),
-('Barratt Home', '583 E', 'Provo', 'Utah', 84604),
-('Stone Sr. Residence', '648 S 250 W', 'Midway', 'Utah', 84049);
+VALUES ('Tom Stone House', '684 S 520 W', 'Midwai', 'Utah', 84032),
+('Barratt Home', '583 E 3215 N', 'Pravo', 'Utah', 84602),
+('Tate Apartment', '500 W 100 S', 'Prooovo', 'Utah', 84064);
 
 SELECT * FROM houses;

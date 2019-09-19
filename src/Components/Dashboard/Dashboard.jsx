@@ -6,7 +6,7 @@ export default class Dashboard extends Component{
     constructor(){
         super()
         this.state={
-
+            houses: []
         }
     }
 
@@ -30,7 +30,10 @@ export default class Dashboard extends Component{
                     <div className="homelisting">
                         <h3>Home Listings</h3>
                     </div>
-                    <House />
+                        {houses.map(house => (
+                            <House />
+                        ))}
+                        
                     
                 </div>
             </div>
