@@ -38,6 +38,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+}
+.houseimage{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.firstinfo{
+  height: 90%;
+}
+.secondinfo{
+  height: 90%;
+}
+
+.actualhouseimage{
+  height: 90%;
+  width: 100px;
 }
 
 .dashboardtitle{
@@ -71,8 +89,10 @@
   padding-left: 1rem;
 }
 .House {
-  background: pink;
+  background:#DEDEDE;
   width: 95%;
   display: flex;
   text-align: left;
+  height: 150px;
+  justify-content: space-around;
 }

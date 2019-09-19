@@ -12,7 +12,9 @@ export default class House extends Component{
         return(
             <div className="House">
                 <div className="houseimage">
-                    <img src="" alt="house"/>
+                    <img src="http://www.rangerwoodperiyar.com/images/joomlart/demo/default.jpg" 
+                    className="actualhouseimage"
+                    alt="house"/>
                 </div>
                 <div className="firstinfo">
                     Property Name:
