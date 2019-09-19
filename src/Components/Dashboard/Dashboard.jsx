@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import House from '../House/House'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 export default class Dashboard extends Component{
     constructor(){
@@ -10,7 +11,20 @@ export default class Dashboard extends Component{
         }
     }
 
+    componentDidMount(){
+        axios.get('/api/houses')
+        .then(res => {
+            this.setState({
+                houses: res.data
+            })
+        })
+        .catch(err => {
+            console.log(err.response.request.response)
+        })
+    }
+
     render(){
+        const {houses} = this.state
         return(
             <div className="Dashboard">
                 <div className="dashboardcontainer">
@@ -31,7 +45,15 @@ export default class Dashboard extends Component{
                         <h3>Home Listings</h3>
                     </div>
                         {houses.map(house => (
-                            <House />
+                            <House 
+                            key={house.house_id}
+                            id={house.house_id}
+                            name={house.name}
+                            address={house.address}
+                            city={house.city}
+                            state={house.state}
+                            zipcode={house.zipcode}
+                            />
                         ))}
                         
                     
