@@ -48,6 +48,7 @@ export default class Dashboard extends Component{
                             <House 
                             key={house.house_id}
                             id={house.house_id}
+                            img={house.img}
                             name={house.name}
                             address={house.address}
                             city={house.city}

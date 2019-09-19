@@ -71,6 +71,9 @@ h5{
   height: 90%;
   width: 33%;
 }
+p{
+  margin:0;
+}
 .secondinfo{
   height: 90%;
   position: relative;
@@ -198,6 +201,7 @@ h5{
   height: 150px;
   justify-content: space-around;
   font-size: small;
+  margin-bottom: 15px;
 }
 
 .x{

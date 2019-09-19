@@ -24,6 +24,17 @@ export default class Wizard extends Component{
         })
     }
 
+    postNewHouse = () => {
+        const {name, address, city, state, zipcode} = this.state
+        let newHouse = {
+            name: name,
+            address: address,
+            city: city,
+            state: state,
+            zipcode: zipcode
+        }
+    }
+
     handleChange = (e) => {
         this.setState({
           [e.target.name]: e.target.value
