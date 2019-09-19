@@ -25,9 +25,9 @@ export default class House extends Component{
                 <div className="secondinfo">
                     <p>Monthly Mortgage: </p>
                     <p>Desired Rent</p>
-                    <div className="x">
+                    <button className="x">
                         X
-                </div>
+                    </button>
                 </div>
                 
             </div>

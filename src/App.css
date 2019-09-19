@@ -204,4 +204,6 @@ h5{
   position: absolute;
   top: 5px;
   right: 5px;
+  border: none;
+  background: none;
 }
