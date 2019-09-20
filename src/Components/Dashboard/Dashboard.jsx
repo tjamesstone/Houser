@@ -21,6 +21,7 @@ export default class Dashboard extends Component{
         .catch(err => {
             console.log(err.response.request.response)
         })
+
     }
 
     delete = (id, name) => {

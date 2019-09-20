@@ -101,7 +101,7 @@ export default class StepThree extends Component{
                             <Link 
                             to='/'>
                                 <button
-                                onClick={this.postNewHouse}
+                                onClick={this.submit}
                                 className="wiz_button"
                                 >Complete
                                 </button>
