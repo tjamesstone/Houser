@@ -22,6 +22,7 @@ app.use(
 app.get('/api/houses', ctrl.getAllHouses)
 app.get('/api/houses:id', ctrl.getOneHouse)
 app.post('/api/houses', ctrl.addNewHouse)
+app.delete('/api/houses/:id', ctrl.deleteHouse)
 
 
 

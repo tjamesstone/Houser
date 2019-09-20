@@ -10,10 +10,10 @@ module.exports = {
             res.status(500).send(`Problem with getting all houses: ${err}`)
         })
     },
-    getOneHouse: (req, res) => {
+    getOneHouse: async (req, res) => {
         const db = req.app.get(db)
         let {id} = req.params
-        db.get_one_house(id)
+        await db.get_one_house(id)
         .then(result => {
             res.status(200).send(result)
         })
@@ -33,5 +33,18 @@ module.exports = {
             console.log(`Error with posting a new house: ${err}`)
             res.status(500).send('Yo error')
         })
+    },
+    deleteHouse: (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.params
+        db.delete_house([id])
+        .then( result => {
+             res.sendStatus(200)
+        })
+        .catch( err => {
+            console.log(`Error with deleting a  house: ${err}`)
+            res.status(500).send(`Error with deleting a  house: ${err}`)
+        })
+        
     }
 }

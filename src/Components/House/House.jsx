@@ -6,7 +6,10 @@ export default class House extends Component{
         this.state={
 
         }
+        // this.delete = this.delete.bind(this)
     }
+   
+   
 
     render(){
         const defaultimg = "http://www.rangerwoodperiyar.com/images/joomlart/demo/default.jpg"
@@ -19,8 +22,8 @@ export default class House extends Component{
           url = this.props.img
         }
         // console.log(url)
-        const {img, name, address, city, state, zipcode} = this.props
-        // console.log(this.props.houses_id)
+        const {id, img, name, address, city, state, zipcode} = this.props
+        // console.log(this.props.id)
         return(
             <div className="House">
                 <div className="houseimage">
@@ -40,7 +43,9 @@ export default class House extends Component{
                 <div className="secondinfo">
                     <p>Monthly Mortgage: </p>
                     <p>Desired Rent: </p>
-                    <button className="x">
+                    <button 
+                    onClick={() => this.props.delete(id, name)}
+                    className="x">
                         X
                     </button>
                 </div>

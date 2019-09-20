@@ -52,8 +52,8 @@ export default class Wizard extends Component{
     render(){
     
 
-        console.log(this.state.name)
-        console.log(this.state.zipcode)
+        // console.log(this.state.name)
+        // console.log(this.state.zipcode)
         return(
             <div className="Wizard">
                 <div className="wizardcontainer">

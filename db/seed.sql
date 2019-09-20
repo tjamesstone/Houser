@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS houses;
 
 create table houses (
-    houses_id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     img TEXT,
     name VARCHAR(200),
     address VARCHAR(200),
