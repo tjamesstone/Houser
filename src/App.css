@@ -169,6 +169,63 @@ p{
   bottom: 30px;
   right: 30px;
 }
+
+.next_button {
+  background-color: #3B5248;
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-weight: bold;
+  color: white;
+}
+.mortgageinput{
+  width: 100%;
+}
+
+.rentinput{
+  width: 100%;
+}
+
+.rentinputs{
+  width: 120%;
+  text-align: center;
+
+}
+
+.imginput{
+  width: 100%;
+}
+
+.steptwo{
+  display: flex;
+  flex-direction: column;
+  align-itmes: center;
+  width: 67.5%;
+}
+
+.stepthree{
+  display: flex;
+  justify-content: center;
+  width: 67.5%;
+}
+
+
+.prev_button {
+  background-color: #3B5248;
+  margin: 20px;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-weight: bold;
+  color: white;
+}
 .citystatezip{
   display: flex;
   justify-content: space-between;
