@@ -1,15 +1,30 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import store, { img } from '../../store'
+import store, { ADD_IMG } from '../../store'
 
 
 export default class StepTwo extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        const reduxState = store.getState()
         this.state = {
-            img: '',
+            reduxState: reduxState,
+            img: reduxState.img,
         }
     }
+
+    handleChange = (e) => {
+        this.setState({
+          [e.target.name]: e.target.value
+        })
+    
+      }
+
+      updateState = () => {
+        store.dispatch({
+          type: ADD_IMG, payload: this.state.img
+        })
+      }
 
     render(){
         return(
@@ -19,13 +34,14 @@ export default class StepTwo extends Component{
                     <input 
                      name='img'
                     onChange={this.handleChange}
-                    value={this.state.imgurl}
+                    value={this.state.img}
                     type="text" 
                     className="imginput"/>
                     <div className="next_step_button">
                             <Link 
                             to='/wizard/step3'>
                                 <button
+                                onClick={() => this.updateState()}
                                 className="next_button"
                                 >Next Step
                                 </button>

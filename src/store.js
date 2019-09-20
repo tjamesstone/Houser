@@ -1,7 +1,7 @@
 import {createStore} from 'redux'
 
 //INITIAL STATE
-const initialstate = {
+const initialState = {
     img: '',
     name: '',
     address: '',
@@ -31,17 +31,30 @@ export const DELETE_HOUSE = 'DELETE_HOUSE'
 export const CLEAR_STATE = 'CLEAR_STATE'
 
 //REDUCER
-function reducer(state = initialstate, action) {
-    const {type, payload} = action
-    switch(type){
-
-
-        
-        
-        default:
-            return state
+function reducer (state=initialState, action) {
+    switch(action.type){
+      case ADD_NAME:
+        return {...state, name: action.payload}
+      case ADD_ADDRESS:
+        return {...state, address: action.payload}
+      case ADD_CITY:
+        return {...state, city: action.payload}
+      case ADD_STATE:
+        return {...state, state: action.payload}
+      case ADD_ZIPCODE:
+        return {...state, zipcode: action.payload}
+      case ADD_IMG:
+        return {...state, img: action.payload}
+      case ADD_MONTHLY_MORTGAGE:
+        return {...state, img: action.payload}
+      case ADD_DESIRED_RENT:
+        return {...state, img: action.payload}
+      case CLEAR_STATE:
+        return {...state, name: '', address: '', city: '', state: '', zipcode: 0, img: '', mortgage: 0, rent: 0}
+      default:
+        return state
     }
-}
+  }
 
 
 //EXPORT THE STORE BY DEFAULT

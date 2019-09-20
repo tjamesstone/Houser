@@ -1,20 +1,39 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import store, { name, address, city, state, zipcode } from '../../store'
+import store, { ADD_NAME, ADD_ADDRESS, ADD_CITY, ADD_ZIPCODE, ADD_STATE } from '../../store'
 
 
 export default class StepOne extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        const reduxState = store.getState()
         this.state = {
-            
-            name: '',
-            address: '',
-            city: '',
-            state: '',
-            zipcode: 0
+            reduxState: reduxState,
+            name: reduxState.name,
+            address: reduxState.address,
+            city: reduxState.city,
+            state: reduxState.state,
+            zipcode: reduxState.zipcode
         }
+    }
+
+    updateState = () => {
+        store.dispatch({
+            type: ADD_NAME, payload: this.state.name
+          })
+          store.dispatch({
+            type: ADD_ADDRESS, payload: this.state.address
+          })
+          store.dispatch({
+            type: ADD_CITY, payload: this.state.city
+          })
+          store.dispatch({
+            type: ADD_STATE, payload: this.state.state
+          })
+          store.dispatch({
+            type: ADD_ZIPCODE, payload: this.state.zipcode
+          })
     }
 
     clearState = () => {
@@ -106,7 +125,7 @@ export default class StepOne extends Component{
                             <Link 
                             to='/wizard/step2'>
                                 <button
-                                onClick={this.postNewHouse}
+                                onClick={() => this.updateState()}
                                 className="next_button"
                                 >Next Step
                                 </button>
