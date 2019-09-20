@@ -21,6 +21,7 @@ app.use(
 //endpoints
 app.get('/api/houses', ctrl.getAllHouses)
 app.get('/api/houses:id', ctrl.getOneHouse)
+app.post('/api/houses', ctrl.addNewHouse)
 
 
 

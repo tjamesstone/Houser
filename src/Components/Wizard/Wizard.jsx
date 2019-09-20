@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 
 export default class Wizard extends Component{
     constructor(){
         super()
         this.state={
+            img: '',
             name: '',
             address: '',
             city: '',
@@ -16,6 +18,7 @@ export default class Wizard extends Component{
 
     clearState = () => {
         this.setState({
+            img: '',
             name: '',
             address: '',
             city: '',
@@ -25,14 +28,18 @@ export default class Wizard extends Component{
     }
 
     postNewHouse = () => {
-        const {name, address, city, state, zipcode} = this.state
+        const {img, name, address, city, state, zipcode} = this.state
         let newHouse = {
+            img: img,
             name: name,
             address: address,
             city: city,
             state: state,
             zipcode: zipcode
         }
+        axios.post('/api/houses', newHouse).then(() => {
+            this.clearState()
+        })
     }
 
     handleChange = (e) => {
@@ -43,6 +50,8 @@ export default class Wizard extends Component{
       }
 
     render(){
+    
+
         console.log(this.state.name)
         console.log(this.state.zipcode)
         return(
@@ -109,6 +118,7 @@ export default class Wizard extends Component{
                         </div>
                         <div className="wiz_complete_button">
                             <button
+                            onClick={this.postNewHouse}
                             className="wiz_button"
                             >Complete</button>
                         </div>

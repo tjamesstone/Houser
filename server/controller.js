@@ -21,5 +21,17 @@ module.exports = {
             console.log(`Problem with getting one house: ${err}`)
             res.status(500).send(`Problem with getting one house: ${err}`)
         })
+    },
+    addNewHouse: (req, res) => {
+        const db = req.app.get('db')
+        let {img, name, address, city, state, zipcode} = req.body
+        db.add_new_house(img, name, address, city, state, zipcode)
+        .then( result => {
+            res.sendStatus(200)
+        })
+        .catch( err => {
+            console.log(`Error with posting a new house: ${err}`)
+            res.status(500).send('Yo error')
+        })
     }
 }
