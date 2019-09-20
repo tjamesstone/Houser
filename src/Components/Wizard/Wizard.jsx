@@ -3,6 +3,7 @@ import {Switch, Route, Link} from 'react-router-dom'
 import StepOne from '../StepOne.jsx/StepOne'
 import StepTwo from '../StepTwo/StepTwo'
 import StepThree from '../StepThree/StepThree'
+import store, {CLEAR_STATE} from '../../store'
 
 
 export default class Wizard extends Component{
@@ -22,6 +23,7 @@ export default class Wizard extends Component{
                         <Link
                             to='/'>
                                 <button 
+                                    onClick={()=>{store.dispatch({type:CLEAR_STATE})}}
                                     className="cancelbutton">
                                     Cancel
                                 </button>

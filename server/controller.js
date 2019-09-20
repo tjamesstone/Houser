@@ -24,8 +24,8 @@ module.exports = {
     },
     addNewHouse: (req, res) => {
         const db = req.app.get('db')
-        let {img, name, address, city, state, zipcode} = req.body
-        db.add_new_house(img, name, address, city, state, zipcode)
+        let {img, name, address, city, state, zipcode, monthly_mortgage, desired_rent} = req.body
+        db.add_new_house(img, name, address, city, state, zipcode, monthly_mortgage, desired_rent)
         .then( result => {
             res.sendStatus(200)
         })
