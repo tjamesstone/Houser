@@ -117,10 +117,14 @@ export default class Wizard extends Component{
                             </div>
                         </div>
                         <div className="wiz_complete_button">
-                            <button
-                            onClick={this.postNewHouse}
-                            className="wiz_button"
-                            >Complete</button>
+                            <Link 
+                            to='/'>
+                                <button
+                                onClick={this.postNewHouse}
+                                className="wiz_button"
+                                >Complete
+                                </button>
+                            </Link>
                         </div>
                 </div>
             </div>
