@@ -42,7 +42,7 @@ export default class StepThree extends Component{
       async submit() {
         const { monthlyMortgage, desiredRent } = this.state
         const { name, address, city, state, zipcode, img } = this.state.reduxState
-        let house = {
+        let newHouse = {
           name,
           address,
           city,
@@ -52,7 +52,7 @@ export default class StepThree extends Component{
           monthlyMortgage,
           desiredRent
         }
-        await axios.post('/api/houses', house).catch(err => console.log(err))
+        await axios.post('/api/houses', newHouse).catch(err => console.log(err))
         
           store.dispatch({ type: CLEAR_STATE })
     

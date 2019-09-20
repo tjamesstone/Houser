@@ -31,6 +31,7 @@
   background:#AED4C0;
   display: flex;
   justify-content: space-around;
+  height: 87.5%;
 }
 .Wizard{
   background:#AED4C0;
@@ -70,6 +71,9 @@ h5{
 .firstinfo{
   height: 90%;
   width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 p{
   margin:0;
@@ -78,6 +82,9 @@ p{
   height: 90%;
   position: relative;
   width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   
 }
 
@@ -203,7 +210,7 @@ p{
 .steptwo{
   display: flex;
   flex-direction: column;
-  align-itmes: center;
+  align-items: center;
   width: 67.5%;
 }
 
@@ -259,6 +266,7 @@ p{
   justify-content: space-around;
   font-size: small;
   margin-bottom: 15px;
+  font-size: xx-small;
 }
 
 .x{
