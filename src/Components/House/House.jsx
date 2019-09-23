@@ -22,7 +22,7 @@ export default class House extends Component{
           url = this.props.img
         }
         // console.log(url)
-        const {id, img, name, address, city, state, zipcode} = this.props
+        const {id, img, name, address, city, state, zipcode, rent, mortgage} = this.props
         // console.log(this.props.id)
         return(
             <div className="House">
@@ -41,8 +41,8 @@ export default class House extends Component{
                     <p>Zip: {zipcode}</p>
                 </div>
                 <div className="secondinfo">
-                    <p>Monthly Mortgage: </p>
-                    <p>Desired Rent: </p>
+                    <p>Monthly Mortgage: {mortgage}</p>
+                    <p>Desired Rent: {rent}</p>
                     <button 
                     onClick={() => this.props.delete(id, name)}
                     className="x">

@@ -11,20 +11,24 @@ export default class Dashboard extends Component{
         }
     }
 
+
     componentDidMount(){
         axios.get('/api/houses')
         .then(res => {
             this.setState({
                 houses: res.data
+
             })
+            // console.log(res.data)
         })
         .catch(err => {
             console.log(err.response.request.response)
         })
+        
 
     }
 
-    delete = (id, name) => {
+    delete = (id) => {
         axios.delete(`/api/houses/${id}`).then(
           axios.get('/api/houses').then(res => {
             this.setState({
@@ -38,6 +42,7 @@ export default class Dashboard extends Component{
 
     render(){
         const {houses} = this.state
+        // console.log(houses)
         return(
             <div className="Dashboard">
                 <div className="dashboardcontainer">
@@ -68,6 +73,8 @@ export default class Dashboard extends Component{
                             state={house.state}
                             zipcode={house.zipcode}
                             delete={this.delete}
+                            rent={house.desired_rent}
+                            mortgage={house.monthly_mortgage}
                             />
                         ))}
                         

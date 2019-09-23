@@ -24,8 +24,8 @@ module.exports = {
     },
     addNewHouse: async (req, res) => {
         const db = req.app.get('db')
-        let {img, name, address, city, state, zipcode, monthly_mortgage, desired_rent} = req.body
-        let houses = db.add_new_house(img, name, address, city, state, zipcode, monthly_mortgage, desired_rent)
+        let {img, name, address, city, state, zipcode, monthlyMortgage, desiredRent} = req.body
+        let houses = db.add_new_house(img, name, address, city, state, zipcode, monthlyMortgage, desiredRent)
         let house = houses[0]
             res.status(200).send(house)
     },
